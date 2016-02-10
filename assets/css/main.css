@@ -58,6 +58,10 @@ header {
     background-color: #550084;
 }
 
+#login {
+    padding: 1em;
+}
+
 body {
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     font-size: 1em;
