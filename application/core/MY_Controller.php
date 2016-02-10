@@ -22,6 +22,22 @@ class Application extends CI_Controller {
 	$this->data['pagetitle'] = 'BotCard Trading Simulator';
         $this->data['pagesubtitle'] = 'The Cool New Place to Trade Black '
                 . 'Market Bot Parts';
+        
+        // If the user $_GET parameter is set, then check to see if it is a 
+        // real user and log the user in if so.
+        if (isset($_GET['user']))
+        {
+            if ($_GET['user'] == 'logout')
+            {
+                $this->session->set_userdata('user', '');
+                $this->session->set_userdata('logged_in', false);
+            }
+            else if ($this->Players->exists($_GET['user']))
+            {
+                $this->session->set_userdata('user', $_GET['user']);
+                $this->session->set_userdata('logged_in', true);
+            }
+        }
     }
     
     /**
@@ -29,7 +45,23 @@ class Application extends CI_Controller {
      */
     function render()
     {
-	$this->data['menubar'] = build_menu_bar($this->choices);
+        // Check for a user session and set the login bar appropriately.
+	if (!$this->session->userdata('logged_in'))
+        {
+            // If there is no session (or the user is logged out), display a 
+            // login box.
+            $this->data['login'] = $this->parser->parse('logged_out', 
+                $this->data, true);
+        }
+        else
+        {
+            // If there is a session, display the user's name.
+            $this->data['username'] = $this->session->userdata('user');
+            $this->data['login'] = $this->parser->parse('logged_in', 
+                    $this->data, true);
+        }
+        
+        $this->data['menubar'] = build_menu_bar($this->choices);
 	$this->data['content'] = $this->parser->parse($this->data['pagebody'], 
                 $this->data, true);
 	$this->data['data'] = &$this->data;
