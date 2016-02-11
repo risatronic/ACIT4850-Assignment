@@ -15,8 +15,10 @@ class Welcome extends Application {
          */
 	public function index()
 	{
-                $this->data['content'] = $this->status();
-                $this->data['content'] .= $this->players();
+                $this->data['welcome_status'] = $this->status();
+                $this->data['welcome_players'] = $this->players();
+                $this->data['content'] = $this->parser->parse('welcome', 
+                        $this->data, true);
                 $this->render();
 	}
         
