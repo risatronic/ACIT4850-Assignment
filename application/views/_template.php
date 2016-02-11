@@ -18,6 +18,7 @@
 	
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/css/main.css"/>
+    <link rel="stylesheet" href="/assets/css/welcome.css"/>
     
     <!-- JavaScript -->
     <script src="/assets/js/main.js"></script>

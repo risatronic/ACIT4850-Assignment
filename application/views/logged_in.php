@@ -1,3 +1,6 @@
 Welcome to the BotCard Trading Centre, {username}!
 <br/>
-<button id="logoutButton" type="button" onclick="loggingOut()">Log Out</button>
+<form action="/" method="post">
+    <input name="sessionUser" type="text" class="hidden" value="logout"/>
+    <input name="submit" type="submit" value="Log Out"/>
+</form>

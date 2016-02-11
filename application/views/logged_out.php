@@ -1,2 +1,4 @@
-<button id="loginButton" type="button" onclick="loggingIn()">Log In</button>
-<input id="inputUser" type="text"/>
+<form action="/" method="post">
+    <input name="sessionUser" type="text"/>
+    <input name="submit" type="submit" value="Log In"/>
+</form>
