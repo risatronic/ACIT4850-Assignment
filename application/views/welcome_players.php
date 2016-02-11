@@ -1,4 +1,3 @@
-<br/><br/>
 <div id="welcome_players">
     <h1>Current Players:</h1>
     {players}

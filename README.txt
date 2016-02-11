@@ -22,6 +22,8 @@ Fernandez de Arteaga, Erick:
     - logged_out view (/application/views/logged_out.php)
     - Home page controller (/application/controllers/Welcome.php)
     - Home page view (/application/views/welcome.php)
+    - Home page status panel (/application/views/welcome_status.php)
+    - Home page players panel (/application/views/welcome_players.php)
     - Players model (/application/models/players.php)
     - Series model (/application/models/series.php)
     - Global CSS setup (/assets/css/main.css)
