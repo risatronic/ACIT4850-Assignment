@@ -19,23 +19,24 @@ class Application extends CI_Controller {
     {
 	parent::__construct();
 	$this->data = array();
-	$this->data['pagetitle'] = 'BotCard Trading Simulator';
+	$this->data['pagetitle'] = 'BotCard Trading Centre';
         $this->data['pagesubtitle'] = 'The Cool New Place to Trade Black '
                 . 'Market Bot Parts';
         
-        // If the user $_GET parameter is set, then check to see if it is a 
-        // real user and log the user in if so.
-        if (isset($_GET['user']))
+        // If the sessionUser $_POST parameter is set, then check to see if it 
+        // is a real user and log the user in if so. Else, logs the user out.
+        if ($this->input->post('sessionUser') !== null)
         {
-            if ($_GET['user'] == 'logout')
+            if ($this->Players->exists($this->input->post('sessionUser')))
             {
-                $this->session->set_userdata('user', '');
-                $this->session->set_userdata('logged_in', false);
-            }
-            else if ($this->Players->exists($_GET['user']))
-            {
-                $this->session->set_userdata('user', $_GET['user']);
+                $this->session->set_userdata('sessionUser', 
+                        $this->input->post('sessionUser'));
                 $this->session->set_userdata('logged_in', true);
+            }
+            else
+            {
+                $this->session->set_userdata('sessionUser', '');
+                $this->session->set_userdata('logged_in', false);
             }
         }
     }
@@ -56,14 +57,12 @@ class Application extends CI_Controller {
         else
         {
             // If there is a session, display the user's name.
-            $this->data['username'] = $this->session->userdata('user');
+            $this->data['username'] = $this->session->userdata('sessionUser');
             $this->data['login'] = $this->parser->parse('logged_in', 
                     $this->data, true);
         }
         
         $this->data['menubar'] = build_menu_bar($this->choices);
-	$this->data['content'] = $this->parser->parse($this->data['pagebody'], 
-                $this->data, true);
 	$this->data['data'] = &$this->data;
 	$this->parser->parse('_template', $this->data);
     }
