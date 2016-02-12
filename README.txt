@@ -38,13 +38,28 @@ Fernandez de Arteaga, Erick:
     
     - Allman-style braces
     - Tabs for indentation
-    - Snake case for variables and methods
-    - CodeIgniter conventions for file naming
+    - Snake case for variables and methods (except those relating to subviews)
+    - CodeIgniter conventions for file naming (except those relating to 
+        subviews)
+    - {main view name}_{subview name} naming for subviews 
+        (e.g., welcome_status.php)
+    - Pseudo-variables and methods for creating subviews take the same name as 
+        the subview (e.g., {welcome_status}, welcome_status(), etc.)
 
     ----------------------------------------------------------------------------
-        Session and State Variables
+        Global Session, State, and Pseudo- Variables to Know
     ----------------------------------------------------------------------------
     
-    Username
-        CI Session: "sessionUser"
-        $_POST: "sessionUser"
+    Session User
+        CI Session:             "sessionUser"
+        $_POST:                 "sessionUser"
+        View Pseudo-Variable:   "sessionUser"
+
+    ----------------------------------------------------------------------------
+        Tips & Tricks
+    ----------------------------------------------------------------------------
+
+    - You can use the pseudo-variable {thisPage} in any view to fill
+        in the URI extension for the current controller (only uses the first 
+        segment of the URL, so assumes no subfolders and no parameters). This 
+        is handy for forming HTML links.
