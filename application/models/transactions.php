@@ -20,7 +20,7 @@ class Transactions extends MY_Model2 {
     /**
      * Gets a specified player's 10 most recent transactions.
      */
-    public function getRecentTransactions($player)
+    public function getRecentTransactionsForPlayer($player)
     {
         $query = $this->db->query(''
                 . 'SELECT '
@@ -30,7 +30,7 @@ class Transactions extends MY_Model2 {
                     . 'ELSE NULL '
                 . 'END as Trans, '
                 . 'CASE Series '
-                    . 'WHEN "x" THEN "bot" '
+                    . 'WHEN "x" THEN "secret" '
                     . 'ELSE CONCAT("Series ", Series) '
                 . 'END as Series, '
                 . '`DateTime` '

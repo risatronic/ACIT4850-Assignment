@@ -113,7 +113,7 @@ class Portfolio extends Application {
         {
             // Get the player's recent activity.
             $rows = array();
-            foreach ($this->Transactions->getRecentTransactions($player) 
+            foreach ($this->Transactions->getRecentTransactionsForPlayer($player) 
                     as $record)
             {
                 $rows[] = (array) $record;
