@@ -1,5 +1,5 @@
 <div id="welcome_players">
-    <h1>Current Players</h1>
+    <h3>Current Players</h3>
     <br/>
     {players}
         <a href="/portfolio/index/{Player}">{Player}</a><br/>
