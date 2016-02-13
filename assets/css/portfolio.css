@@ -1,0 +1,44 @@
+/*==============================================================================
+    PORTFOLIO.CSS STYLESHEET
+					
+        Doig, Marisa
+        Erick Fernandez de Arteaga
+==============================================================================*/
+
+/*==============================================================================
+	Page Setup
+==============================================================================*/
+
+#portfolioForm {
+    float:right;
+}
+
+/*==============================================================================
+	Tables
+==============================================================================*/
+#portfolioTable , #portfolioTable tr, #portfolioTable th, #portfolioTable td {
+    border-collapse: collapse;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#portfolioTable table {
+    width: 25em;
+}
+
+#portfolioTable th, #portfolioTable td {
+    padding: 1em;
+}
+
+#portfolioTable th {
+    background-color: #3a2650;
+    color: #c59cff;
+}
+
+#portfolioTable td {
+    background-color: #c59cff;
+    color: #3a2650;
+}
+
+#portfolioTable .alignLeft {text-align: left;}
+

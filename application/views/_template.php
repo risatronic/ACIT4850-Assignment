@@ -18,10 +18,7 @@
 	
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/css/main.css"/>
-    <link rel="stylesheet" href="/assets/css/welcome.css"/>
-    
-    <!-- JavaScript -->
-    <script src="/assets/js/main.js"></script>
+    <link rel="stylesheet" href="/assets/css/portfolio.css"/>
 </head>
 
 <!--============================================================================
@@ -50,6 +47,7 @@
     <div id='login'>
         {login}
     </div>
+    <hr/>
 <!--============================================================================
 	Main
 =============================================================================-->

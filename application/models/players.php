@@ -12,11 +12,15 @@ class Players extends MY_Model {
         $this->_keyField = 'Player';
     }
     
+    //--------------------------------------------------------------------------
+    //  Custom SELECTs
+    //--------------------------------------------------------------------------
+    
     /**
      * Gets the game's current players (Player), their current peanuts 
      * (Peanuts), and the value of their currently held bot pieces (Equity).
      */
-    function currentWorth()
+    public function getCurrentWorths()
     {
         $query = $this->db->query(''
                 . 'SELECT p.Player, p.Peanuts, COUNT(c.Piece) as Equity '
@@ -27,5 +31,16 @@ class Players extends MY_Model {
                 . 'ORDER BY p.Player ASC;');
                 
         return $query->result();
+    }
+    
+    public function getFirstPlayerName()
+    {
+        $query = $this->db->query(''
+                . 'SELECT Player '
+                . 'FROM `players` '
+                . 'ORDER BY Player ASC '
+                . 'LIMIT 1;');
+        
+        return $query->row()->Player;
     }
 }
