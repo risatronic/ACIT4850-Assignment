@@ -6,6 +6,6 @@
         Series {Series} Bots ({Description}) are available with a frequency 
         of {Frequency}. A matched Series {Series} bot is valued at {Value} 
         peanuts. {Held} pieces are currently held by players. 
-        <br/>
+        <br/><br/>
     {/botSummary}
 </div>

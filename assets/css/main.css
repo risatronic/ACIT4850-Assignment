@@ -16,7 +16,7 @@
 html {
     background-color: #d3c6d9;
     color: #180b26;
-    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
     font-size: 1em;
 }
 
@@ -30,9 +30,13 @@ header {
 
 #subtitle {
     padding-left: 2em;
+
 }
 
-#nav {}
+#nav {
+    margin-left: 5%;
+    margin-right: 5%;
+}
 
 #nav > ul {
     list-style-type: none;
@@ -59,16 +63,19 @@ header {
 }
 
 #login {
-    padding: 1em;
+    margin-left: 5%;
 }
 
 body {
-    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
     font-size: 1em;
+
 }
 
 #main {
     padding: 1em;
+        margin-left: 10%;
+    margin-right: 10%;
 }
 
 footer {}
