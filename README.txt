@@ -20,13 +20,21 @@ Fernandez de Arteaga, Erick:
     - _template view (/application/views/_template.php)
     - logged_in view (/application/views/logged_in.php)
     - logged_out view (/application/views/logged_out.php)
-    - Home page controller (/application/controllers/Welcome.php)
-    - Home page view (/application/views/welcome.php)
-    - Home page status panel (/application/views/welcome_status.php)
-    - Home page players panel (/application/views/welcome_players.php)
+    - Base CSS setup (/assets/css/main.css)
+    - Welcome controller (/application/controllers/Welcome.php)
+    - welcome view (/application/views/welcome.php)
+    - welcome_status subview (/application/views/welcome_status.php)
+    - welcome_players subview (/application/views/welcome_players.php)
+    - Portfolio controller (/application/controllers/Portfolio.php)
+    - portfolio view (/application/views/portfolio.php)
+    - portfolio_select subview (/application/views/portfolio_select.php)
+    - portfolio_activity subview (/application/views/portfolio_activity.php)
+    - portfolio_holdings subview (/application/views/portfolio_holdings.php)
+    - Portfolio CSS setup (/assets/css/portfolio.css)
     - Players model (/application/models/players.php)
     - Series model (/application/models/series.php)
-    - Global CSS setup (/assets/css/main.css)
+    - Collections model (/application/models/collections.php)
+    - Transactions model (/application/models/transactions.php)
 
 --------------------------------------------------------------------------------
     For Developers
@@ -55,11 +63,5 @@ Fernandez de Arteaga, Erick:
         $_POST:                 "sessionUser"
         View Pseudo-Variable:   "sessionUser"
 
-    ----------------------------------------------------------------------------
-        Tips & Tricks
-    ----------------------------------------------------------------------------
-
-    - You can use the pseudo-variable {thisPage} in any view to fill
-        in the URI extension for the current controller (only uses the first 
-        segment of the URL, so assumes no subfolders and no parameters). This 
-        is handy for forming HTML links.
+    Link to Current Controller
+        View Pseudo-Variable:   "thisPage"

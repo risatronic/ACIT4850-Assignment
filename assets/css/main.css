@@ -108,6 +108,12 @@ h6 {}
 
 .oblique {font-style: oblique;}
 
+.alignLeft {text-align: left;}
+
+.alignRight {text-align: right;}
+
+.alignCenter {text-align: center;}
+
 .inline {display: inline;}
 
 .block {display: block;}
