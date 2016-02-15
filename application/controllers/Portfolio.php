@@ -6,7 +6,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * the portfolio of the currently logged-in player. If no player is logged-in, 
  * shows the alphabetically first player.
  */
-class Portfolio extends Application {
+class Portfolio extends Application 
+{
 
         function __construct()
 	{

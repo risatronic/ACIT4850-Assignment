@@ -3,7 +3,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 /**
  * Default controller.
  */
-class Welcome extends Application {
+class Welcome extends Application 
+{
 
         function __construct()
 	{
