@@ -28,13 +28,16 @@ class Application extends CI_Controller {
         // If the sessionUser $_POST parameter is set, then check to see if it 
         // is a real user and log the user in if so. Else, logs the user out.
         $sessionUser = $this->input->post('sessionUser');
+        // If the sessionUser is not null...
         if ($sessionUser !== null)
         {
+            // ...then if the sessionUser is a real player, log them in.
             if ($this->Players->exists($sessionUser))
             {
                 $this->session->set_userdata('sessionUser', $sessionUser);
                 $this->session->set_userdata('logged_in', true);
             }
+            // ...then if the session user it not a real player, log them out.
             else
             {
                 $this->session->set_userdata('sessionUser', '');
