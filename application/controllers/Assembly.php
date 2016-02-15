@@ -7,14 +7,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Assembly extends Application {
 
-    function __construct() {
+    function __construct() 
+    {
         parent::__construct();
     }
 
     /**
      * Default method.
      */
-    public function index() {
+    public function index() 
+    {
         $player = $this->session->userdata('sessionUser');
 
         //displays a different view if no player is logged in
@@ -37,7 +39,8 @@ class Assembly extends Application {
     /**
      * Builds the assembly_heads subview.
      */
-    private function assembly_heads($player) {
+    private function assembly_heads($player) 
+    {
         //counts the number held by $player of each head piece
         $this->data['no11a-0'] = $this->Collections->getUniquePieceCountForPlayer($player, '11a', '0');
 
@@ -59,7 +62,8 @@ class Assembly extends Application {
             quite a mess but I tried following the CodeIgniter table how-to page that I found, to no avail.
             Ref: https://ellislab.com/codeigniter/user-guide/libraries/table.html
         
-        private function assembly_heads($player) {
+        private function assembly_heads($player) 
+        {
          
         $this->load->library('table');
         
@@ -119,7 +123,8 @@ class Assembly extends Application {
         
         //iterate through pieces remaining after above process and generate the contents of their cells
           including an image and radio button with their unique ID
-        foreach($this->data['pieces'] as $piece){
+        foreach($this->data['pieces'] as $piece)
+        {
             
             $piece = '<img src="/data/' . $piece . 
                     '.jpeg" /><br/>' . $this->data['no' . $piece . ''] . 
@@ -140,7 +145,8 @@ class Assembly extends Application {
     /**
      * Builds the assembly_bodies subview.
      */
-    private function assembly_bodies($player) {
+    private function assembly_bodies($player) 
+    {
         //counts the number held by $player of each body piece
         $this->data['no11a-1'] = $this->Collections->getUniquePieceCountForPlayer($player, '11a', '1');
 
@@ -160,7 +166,8 @@ class Assembly extends Application {
     /**
      * Builds the assembly_legs subview.
      */
-    private function assembly_legs($player) {
+    private function assembly_legs($player) 
+    {
         //counts the number held by $player of each legs piece
         $this->data['no11a-2'] = $this->Collections->getUniquePieceCountForPlayer($player, '11a', '2');
 
@@ -182,11 +189,13 @@ class Assembly extends Application {
       as an array to populate the "bots" psuedovariable which would then be used in the
       assembly_completed.php subview to display the assembled bot.
 
-      private function assembly_completed($player){
+      private function assembly_completed($player)
+    {
       
       $rows = array();
 
-      if($player == null){
+      if($player == null)
+      {
             return;
       }
 
@@ -197,6 +206,6 @@ class Assembly extends Application {
             $this->data['bots'] = $rows;
 
       return $this->parser->parse('assembly_completed', $this->data, true);
-      }
+    }
      */
 }
