@@ -5,7 +5,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 /**
  * Controller for viewing and assembling bot pieces.
  */
-class Assembly extends Application {
+class Assembly extends Application 
+{
 
     function __construct() 
     {
