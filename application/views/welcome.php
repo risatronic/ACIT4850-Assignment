@@ -1,3 +1,3 @@
 {welcome_status}
-<br/><br/>
+<br/>
 {welcome_players}
