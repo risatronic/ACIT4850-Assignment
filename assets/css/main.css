@@ -14,15 +14,18 @@
 }
 
 html {
-    background-color: #d3c6d9;
+    background-color: #af98ba;
     color: #180b26;
     font-family: "Arial", sans-serif;
     font-size: 1em;
 }
 
 body {
+    background-color: #d3c6d9;
     font-family: "Arial", sans-serif;
     font-size: 1em;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 header {
