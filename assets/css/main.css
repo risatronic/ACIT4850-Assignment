@@ -1,0 +1,170 @@
+/*==============================================================================
+    MAIN.CSS STYLESHEET
+                                        
+        Doig, Marisa
+        Erick Fernandez de Arteaga
+==============================================================================*/
+
+/*==============================================================================
+        Page Setup
+==============================================================================*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: #d3c6d9;
+    color: #180b26;
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+}
+
+header {
+    background-color: #3a2650;
+    color: #c59cff;
+    padding: 1em 1em 1em 2em;
+}
+
+img {
+    width: 10em;
+    height: 4em;
+}
+
+td{
+    text-align: center;
+    margin: auto;
+}
+
+#title {}
+
+#subtitle {
+    padding-left: 2em;
+
+}
+
+#nav {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#nav > ul {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+#nav > ul > li {
+    float: left;
+    width: 33.33%;
+}
+
+#nav a:link, #nav a:visited{
+    background-color: #6a00a3;
+    color: #FFFFFF;
+    display: block;
+    font-weight: bold;
+    padding: 0.75em;
+    text-align: center;
+    text-decoration: none;
+}
+
+#nav a:hover, #nav a:active {
+    background-color: #550084;
+}
+
+#login {
+    margin-left: 5%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+
+}
+
+#main {
+    padding: 1em;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+footer {}
+
+footer hr {
+    border: 0;
+    box-shadow: inset 0 0.75em 0.75em -0.75em rgba(0,0,0,0.5);
+    height: 0.75em;
+}
+
+#copyright {
+    padding: 0.5em 1em 1em;
+    text-align: right;
+}
+
+#assemble{
+    width: 7em;
+    height: 3em;
+    margin-left: 45%;
+    margin-right: 50%;
+}
+
+/*==============================================================================
+        Headers
+==============================================================================*/
+h1 {}
+
+h2 {}
+
+h3 {}
+
+h4 {}
+
+h5 {}
+
+h6 {}
+
+/*==============================================================================
+        Special Text Styles
+==============================================================================*/
+.plainText {font-style: normal; font-weight: normal; text-decoration: none;}
+
+.bold {font-weight: bold;}
+
+.oblique {font-style: oblique;}
+
+.alignLeft {text-align: left;}
+
+.alignRight {text-align: right;}
+
+.alignCenter {text-align: center;}
+
+.inline {display: inline;}
+
+.block {display: block;}
+
+.floatLeft {float: left;}
+
+.floatRight {float: right;}
+
+.hidden {display: none;}
+
+.systemMessage {color: blue;}
+
+.error {color: red;}
+
+/*==============================================================================
+        Hyperlinks
+==============================================================================*/
+a {text-decoration: none; font-weight: bold;}
+a:link {color: #1796c0;}
+a:visited {color: #117a9c;}
+a:hover {color: #37b6e0;}
+a:active {color: #67e6ff;}
+
+/*==============================================================================
+        Images
+==============================================================================*/
+
+/*==============================================================================
+        Tables
+==============================================================================*/
