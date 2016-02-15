@@ -1,12 +1,12 @@
 /*==============================================================================
     MAIN.CSS STYLESHEET
-                                        
+					
         Doig, Marisa
         Erick Fernandez de Arteaga
 ==============================================================================*/
 
 /*==============================================================================
-        Page Setup
+	Page Setup
 ==============================================================================*/
 * {
     margin: 0;
@@ -16,7 +16,12 @@
 html {
     background-color: #d3c6d9;
     color: #180b26;
-    font-family: Arial, sans-serif;
+    font-family: "Arial", sans-serif;
+    font-size: 1em;
+}
+
+body {
+    font-family: "Arial", sans-serif;
     font-size: 1em;
 }
 
@@ -26,27 +31,13 @@ header {
     padding: 1em 1em 1em 2em;
 }
 
-img {
-    width: 10em;
-    height: 4em;
-}
-
-td{
-    text-align: center;
-    margin: auto;
-}
-
 #title {}
 
 #subtitle {
     padding-left: 2em;
-
 }
 
-#nav {
-    margin-left: 5%;
-    margin-right: 5%;
-}
+#nav {}
 
 #nav > ul {
     list-style-type: none;
@@ -73,19 +64,13 @@ td{
 }
 
 #login {
-    margin-left: 5%;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    font-size: 1em;
-
+    padding: 1em;
 }
 
 #main {
     padding: 1em;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 footer {}
@@ -97,19 +82,12 @@ footer hr {
 }
 
 #copyright {
-    padding: 0.5em 1em 1em;
-    text-align: right;
-}
-
-#assemble{
-    width: 7em;
-    height: 3em;
-    margin-left: 45%;
-    margin-right: 50%;
+	padding: 0.5em 1em 1em;
+	text-align: right;
 }
 
 /*==============================================================================
-        Headers
+	Headers
 ==============================================================================*/
 h1 {}
 
@@ -124,7 +102,7 @@ h5 {}
 h6 {}
 
 /*==============================================================================
-        Special Text Styles
+	Special Text Styles
 ==============================================================================*/
 .plainText {font-style: normal; font-weight: normal; text-decoration: none;}
 
@@ -153,7 +131,7 @@ h6 {}
 .error {color: red;}
 
 /*==============================================================================
-        Hyperlinks
+	Hyperlinks
 ==============================================================================*/
 a {text-decoration: none; font-weight: bold;}
 a:link {color: #1796c0;}
@@ -162,9 +140,9 @@ a:hover {color: #37b6e0;}
 a:active {color: #67e6ff;}
 
 /*==============================================================================
-        Images
+	Images
 ==============================================================================*/
 
 /*==============================================================================
-        Tables
+	Tables
 ==============================================================================*/
