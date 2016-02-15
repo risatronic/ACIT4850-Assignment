@@ -47,7 +47,6 @@
     <div id='login'>
         {login}
     </div>
-    <hr/>
 <!--============================================================================
 	Main
 =============================================================================-->
@@ -60,7 +59,7 @@
 =============================================================================-->
     <footer>
         <hr>
-        <p id="copyright">&copy; Doig, Marisa; Erick Fernandez de Arteaga; 
+        <p id="copyright">&copy; Marisa Doig, Erick Fernandez de Arteaga; 
             <script type="text/javascript">
                 document.write(new Date().getFullYear());
             </script>

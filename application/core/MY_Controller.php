@@ -9,7 +9,7 @@ class Application extends CI_Controller {
     protected $id;		  // identifier for our content
     protected $choices = array(// our menu navbar
 	'Home' => '/', 'Player Portfolio' => '/portfolio', 
-        'Bot Assembly' => '/'
+        'Bot Assembly' => '/assembly'
     );
 
     /**
