@@ -3,7 +3,8 @@
 /**
  * Model for the players table of the botcards database.
  */
-class Players extends MY_Model {
+class Players extends MY_Model 
+{
 
     function __construct()
     {

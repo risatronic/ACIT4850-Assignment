@@ -3,7 +3,8 @@
 /**
  * Model for the transactions table of the botcards database.
  */
-class Transactions extends MY_Model2 {
+class Transactions extends MY_Model2 
+{
 
     function __construct()
     {

@@ -4,7 +4,8 @@
  *
  * Default application controller
  */
-class Application extends CI_Controller {
+class Application extends CI_Controller 
+{
     protected $data = array();      // parameters for view components
     protected $id;		  // identifier for our content
     protected $choices = array(// our menu navbar
