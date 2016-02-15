@@ -13,7 +13,7 @@ Team Members:
 --------------------------------------------------------------------------------
 
 Doig, Marisa:
-    - Tweaked CSS and updated other aspects to match (/assets/css/main.css)
+    - Assembly CSS (/assets/css/assembly.css)
     - Assembly controller (/application/controllers/Assembly.php)
     - assembly view (/application/views/assembly.php)
     - assembly_anon view for logged out users (/application/views/assembly_anon.php)

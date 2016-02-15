@@ -19,6 +19,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/css/main.css"/>
     <link rel="stylesheet" href="/assets/css/portfolio.css"/>
+    <link rel="stylesheet" href="/assets/css/assembly.css"/>
 </head>
 
 <!--============================================================================
@@ -47,6 +48,7 @@
     <div id='login'>
         {login}
     </div>
+    <hr/>
 <!--============================================================================
 	Main
 =============================================================================-->
