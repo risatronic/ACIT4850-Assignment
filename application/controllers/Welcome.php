@@ -20,8 +20,7 @@ class Welcome extends Application
         $this->data['welcome_players'] = $this->welcome_players();
             
         // Render.
-        $this->data['content'] = $this->parser->parse('welcome', $this->data, 
-                true);
+        $this->data['pagebody'] = 'welcome';
         $this->render();
     }
         

@@ -24,8 +24,7 @@ class Portfolio extends Application
         $this->data['portfolio_holdings'] = $this->portfolio_holdings($player);
             
         // Render.
-        $this->data['content'] = $this->parser->parse('portfolio', $this->data, 
-                true);
+        $this->data['pagebody'] = 'portfolio';
         $this->render();
     }
         
