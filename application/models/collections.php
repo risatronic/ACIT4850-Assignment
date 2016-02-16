@@ -43,7 +43,7 @@ class Collections extends MY_Model
                 . 'FROM `collections` '
                 . 'WHERE Player = "' . $player . '" '
                 . 'AND Piece LIKE "____' . $part . '"'
-                . 'ORDER BY Piece');
+                . 'ORDER BY Piece ASC');
         
         return $query->result();
     }
