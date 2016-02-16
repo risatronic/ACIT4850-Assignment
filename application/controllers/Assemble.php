@@ -50,15 +50,13 @@ class Assemble extends Application
             }
             
             // Set the page content.
-            $this->data['content'] = $this->parser->parse('assemble', 
-                    $this->data, true);
+            $this->data['pagebody'] = 'assemble';
         }
         // If the player is not logged in, display a message advising 
         // login.
         else
         {
-            $this->data['content'] = $this->parser->parse('assemble_denied', 
-                    $this->data, true);
+            $this->data['pagebody'] = 'assemble_denied';
         }
             
         // Render.
