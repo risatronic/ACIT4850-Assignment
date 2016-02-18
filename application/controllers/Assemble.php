@@ -72,7 +72,7 @@ class Assemble extends Application
         
         // Builder Heads
         $rows = array();
-        foreach ($this->Collections->getTypePiecesForPlayer($player, 0) as 
+        foreach ($this->collections->getTypePiecesForPlayer($player, 0) as 
                 $record)
         {
             $rows[] = (array) $record;
@@ -81,7 +81,7 @@ class Assemble extends Application
         
         // Builder Bodies
         $rows = array();
-        foreach ($this->Collections->getTypePiecesForPlayer($player, 1) as 
+        foreach ($this->collections->getTypePiecesForPlayer($player, 1) as 
                 $record)
         {
             $rows[] = (array) $record;
@@ -90,7 +90,7 @@ class Assemble extends Application
         
         // Builder Legs
         $rows = array();
-        foreach ($this->Collections->getTypePiecesForPlayer($player, 2) as 
+        foreach ($this->collections->getTypePiecesForPlayer($player, 2) as 
                 $record)
         {
             $rows[] = (array) $record;
@@ -103,17 +103,17 @@ class Assemble extends Application
     private function assemble_preview($head, $body, $legs)
     {
         // Set the preview images' sources.
-        $this->data['assembleHead'] = $this->Collections->get($head)->Piece;
-        $this->data['assembleBody'] = $this->Collections->get($body)->Piece;
-        $this->data['assembleLegs'] = $this->Collections->get($legs)->Piece;
+        $this->data['assembleHead'] = $this->collections->get($head)->Piece;
+        $this->data['assembleBody'] = $this->collections->get($body)->Piece;
+        $this->data['assembleLegs'] = $this->collections->get($legs)->Piece;
         
         // Set the sellable piece tokens.
         $this->data['assembleHeadToken'] = 
-                $this->Collections->get($head)->Token;
+                $this->collections->get($head)->Token;
         $this->data['assembleBodyToken'] = 
-                $this->Collections->get($body)->Token;
+                $this->collections->get($body)->Token;
         $this->data['assembleLegsToken'] = 
-                $this->Collections->get($legs)->Token;
+                $this->collections->get($legs)->Token;
         
         return $this->parser->parse('assemble_preview', $this->data, true);
     }

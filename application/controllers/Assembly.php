@@ -43,17 +43,17 @@ class Assembly extends Application
     private function assembly_heads($player) 
     {
         //counts the number held by $player of each head piece
-        $this->data['no11a-0'] = $this->Collections->getUniquePieceCountForPlayer($player, '11a', '0');
+        $this->data['no11a-0'] = $this->collections->getUniquePieceCountForPlayer($player, '11a', '0');
 
-        $this->data['no11b-0'] = $this->Collections->getUniquePieceCountForPlayer($player, '11b', '0');
+        $this->data['no11b-0'] = $this->collections->getUniquePieceCountForPlayer($player, '11b', '0');
 
-        $this->data['no11c-0'] = $this->Collections->getUniquePieceCountForPlayer($player, '11c', '0');
+        $this->data['no11c-0'] = $this->collections->getUniquePieceCountForPlayer($player, '11c', '0');
 
-        $this->data['no13c-0'] = $this->Collections->getUniquePieceCountForPlayer($player, '13c', '0');
+        $this->data['no13c-0'] = $this->collections->getUniquePieceCountForPlayer($player, '13c', '0');
 
-        $this->data['no13d-0'] = $this->Collections->getUniquePieceCountForPlayer($player, '13d', '0');
+        $this->data['no13d-0'] = $this->collections->getUniquePieceCountForPlayer($player, '13d', '0');
 
-        $this->data['no26h-0'] = $this->Collections->getUniquePieceCountForPlayer($player, '26h', '0');
+        $this->data['no26h-0'] = $this->collections->getUniquePieceCountForPlayer($player, '26h', '0');
 
         return $this->parser->parse('assembly_heads', $this->data, true);
     }
@@ -91,32 +91,32 @@ class Assembly extends Application
         
         //check number held for each type of head piece. If it is 0, remove from the above array
           as it is not to be included in the resulting table
-        $this->data['no11a-0'] = $this->Collections->getUniquePieceCountForPlayer($player, '11a', '0');
+        $this->data['no11a-0'] = $this->collections->getUniquePieceCountForPlayer($player, '11a', '0');
         if($this->data['no11a-0'] == 0){
             unset($this->data['pieces'][0]);
             var_dump($this->data['pieces']);
         }
-        $this->data['no11b-0'] = $this->Collections->getUniquePieceCountForPlayer($player, '11b', '0');
+        $this->data['no11b-0'] = $this->collections->getUniquePieceCountForPlayer($player, '11b', '0');
         if($this->data['no11b-0'] == 0){
             unset($this->data['pieces'][1]);
             var_dump($this->data['pieces']);
         }
-        $this->data['no11c-0'] = $this->Collections->getUniquePieceCountForPlayer($player, '11c', '0');
+        $this->data['no11c-0'] = $this->collections->getUniquePieceCountForPlayer($player, '11c', '0');
         if($this->data['no11c-0'] == 0){
             unset($this->data['pieces'][2]);
             var_dump($this->data['pieces']);
         }
-        $this->data['no13c-0'] = $this->Collections->getUniquePieceCountForPlayer($player, '13c', '0');
+        $this->data['no13c-0'] = $this->collections->getUniquePieceCountForPlayer($player, '13c', '0');
         if($this->data['no13c-0'] == 0){
             unset($this->data['pieces'][3]);
             var_dump($this->data['pieces']);
         }
-        $this->data['no13d-0'] = $this->Collections->getUniquePieceCountForPlayer($player, '13d', '0');
+        $this->data['no13d-0'] = $this->collections->getUniquePieceCountForPlayer($player, '13d', '0');
         if($this->data['no13d-0'] == 0){
             unset($this->data['pieces'][4]);
             var_dump($this->data['pieces']);
         }
-        $this->data['no26h-0'] = $this->Collections->getUniquePieceCountForPlayer($player, '26h', '0');
+        $this->data['no26h-0'] = $this->collections->getUniquePieceCountForPlayer($player, '26h', '0');
         if($this->data['no26h-0'] == 0){
             unset($this->data['pieces'][5]);
             var_dump($this->data['pieces']);
@@ -149,17 +149,17 @@ class Assembly extends Application
     private function assembly_bodies($player) 
     {
         //counts the number held by $player of each body piece
-        $this->data['no11a-1'] = $this->Collections->getUniquePieceCountForPlayer($player, '11a', '1');
+        $this->data['no11a-1'] = $this->collections->getUniquePieceCountForPlayer($player, '11a', '1');
 
-        $this->data['no11b-1'] = $this->Collections->getUniquePieceCountForPlayer($player, '11b', '1');
+        $this->data['no11b-1'] = $this->collections->getUniquePieceCountForPlayer($player, '11b', '1');
 
-        $this->data['no11c-1'] = $this->Collections->getUniquePieceCountForPlayer($player, '11c', '1');
+        $this->data['no11c-1'] = $this->collections->getUniquePieceCountForPlayer($player, '11c', '1');
 
-        $this->data['no13c-1'] = $this->Collections->getUniquePieceCountForPlayer($player, '13c', '1');
+        $this->data['no13c-1'] = $this->collections->getUniquePieceCountForPlayer($player, '13c', '1');
 
-        $this->data['no13d-1'] = $this->Collections->getUniquePieceCountForPlayer($player, '13d', '1');
+        $this->data['no13d-1'] = $this->collections->getUniquePieceCountForPlayer($player, '13d', '1');
 
-        $this->data['no26h-1'] = $this->Collections->getUniquePieceCountForPlayer($player, '26h', '1');
+        $this->data['no26h-1'] = $this->collections->getUniquePieceCountForPlayer($player, '26h', '1');
 
         return $this->parser->parse('assembly_bodies', $this->data, true);
     }
@@ -170,17 +170,17 @@ class Assembly extends Application
     private function assembly_legs($player) 
     {
         //counts the number held by $player of each legs piece
-        $this->data['no11a-2'] = $this->Collections->getUniquePieceCountForPlayer($player, '11a', '2');
+        $this->data['no11a-2'] = $this->collections->getUniquePieceCountForPlayer($player, '11a', '2');
 
-        $this->data['no11b-2'] = $this->Collections->getUniquePieceCountForPlayer($player, '11b', '2');
+        $this->data['no11b-2'] = $this->collections->getUniquePieceCountForPlayer($player, '11b', '2');
 
-        $this->data['no11c-2'] = $this->Collections->getUniquePieceCountForPlayer($player, '11c', '2');
+        $this->data['no11c-2'] = $this->collections->getUniquePieceCountForPlayer($player, '11c', '2');
 
-        $this->data['no13c-2'] = $this->Collections->getUniquePieceCountForPlayer($player, '13c', '2');
+        $this->data['no13c-2'] = $this->collections->getUniquePieceCountForPlayer($player, '13c', '2');
 
-        $this->data['no13d-2'] = $this->Collections->getUniquePieceCountForPlayer($player, '13d', '2');
+        $this->data['no13d-2'] = $this->collections->getUniquePieceCountForPlayer($player, '13d', '2');
 
-        $this->data['no26h-2'] = $this->Collections->getUniquePieceCountForPlayer($player, '26h', '2');
+        $this->data['no26h-2'] = $this->collections->getUniquePieceCountForPlayer($player, '26h', '2');
 
         return $this->parser->parse('assembly_legs', $this->data, true);
     }
