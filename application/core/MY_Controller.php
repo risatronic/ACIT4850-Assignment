@@ -33,10 +33,10 @@ class Application extends CI_Controller
         if ($sessionUser !== null)
         {
             // ...then if the sessionUser exists in the database, log them in.
-            if ($this->Players->exists($sessionUser))
+            if ($this->players->exists($sessionUser))
             {
                 $this->session->set_userdata('sessionUser', 
-                        $this->Players->get($sessionUser)->Player);
+                        $this->players->get($sessionUser)->Player);
                 $this->session->set_userdata('logged_in', true);
             }
             // ...then if the sessionUser does not exist in the database, log 

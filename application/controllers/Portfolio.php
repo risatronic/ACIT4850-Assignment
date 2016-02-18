@@ -55,7 +55,7 @@ class Portfolio extends Application
         if ($player !== null)
         {
             // ...then if player does not exist...
-            if (!$this->Players->exists($player))
+            if (!$this->players->exists($player))
             {
                 // ...then if the user is logged in, select logged-in user.
                 if ($this->session->userdata('logged_in'))
@@ -65,7 +65,7 @@ class Portfolio extends Application
                 // ...then if the user is not logged in, select first user.
                 else
                 {
-                    $player = $this->Players->getFirstPlayerName();
+                    $player = $this->players->getFirstPlayerName();
                 }
             }
         }
@@ -80,7 +80,7 @@ class Portfolio extends Application
             // ... then if user is not logged in, select first user.
             else
             {
-                $player = $this->Players->getFirstPlayerName();
+                $player = $this->players->getFirstPlayerName();
             }
         }
             
@@ -94,7 +94,7 @@ class Portfolio extends Application
     {
         // Get the game's current players.
         $rows = array();
-        foreach ($this->Players->all() as $record)
+        foreach ($this->players->all() as $record)
         {
             $rows[] = (array) $record;
         }
@@ -110,7 +110,7 @@ class Portfolio extends Application
     {
         // Get the player's recent activity.
         $rows = array();
-        foreach ($this->Transactions->getRecentTransactionsForPlayer($player) 
+        foreach ($this->transactions->getRecentTransactionsForPlayer($player) 
                 as $record)
         {
             $rows[] = (array) $record;
@@ -127,31 +127,31 @@ class Portfolio extends Application
     {
         // Get the counts of all the piece types.
         $this->data['s11Heads'] = 
-                $this->Collections->getPieceTypeCountForPlayer($player, '11', 
+                $this->collections->getPieceTypeCountForPlayer($player, '11', 
                         '0');
         $this->data['s11Bodies'] = 
-                $this->Collections->getPieceTypeCountForPlayer($player, '11', 
+                $this->collections->getPieceTypeCountForPlayer($player, '11', 
                         '1');
         $this->data['s11Legs'] = 
-                $this->Collections->getPieceTypeCountForPlayer($player, '11', 
+                $this->collections->getPieceTypeCountForPlayer($player, '11', 
                         '2');
         $this->data['s13Heads'] = 
-                $this->Collections->getPieceTypeCountForPlayer($player, '13', 
+                $this->collections->getPieceTypeCountForPlayer($player, '13', 
                         '0');
         $this->data['s13Bodies'] = 
-                $this->Collections->getPieceTypeCountForPlayer($player, '13', 
+                $this->collections->getPieceTypeCountForPlayer($player, '13', 
                         '1');
         $this->data['s13Legs'] = 
-                $this->Collections->getPieceTypeCountForPlayer($player, '13', 
+                $this->collections->getPieceTypeCountForPlayer($player, '13', 
                         '2');
         $this->data['s26Heads'] = 
-                $this->Collections->getPieceTypeCountForPlayer($player, '26', 
+                $this->collections->getPieceTypeCountForPlayer($player, '26', 
                         '0');
         $this->data['s26Bodies'] = 
-                $this->Collections->getPieceTypeCountForPlayer($player, '26', 
+                $this->collections->getPieceTypeCountForPlayer($player, '26', 
                         '1');
         $this->data['s26Legs'] = 
-                $this->Collections->getPieceTypeCountForPlayer($player, '26', 
+                $this->collections->getPieceTypeCountForPlayer($player, '26', 
                         '2');
             
         return $this->parser->parse('portfolio_holdings', $this->data, true);
