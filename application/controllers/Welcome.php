@@ -31,7 +31,7 @@ class Welcome extends Application
     {            
         // Get the listing of current bots and their frequency.
         $rows = array();
-        foreach ($this->Series->getStatus() as $record)
+        foreach ($this->series->getStatus() as $record)
         {
             $rows[] = (array) $record;
         }
@@ -47,7 +47,7 @@ class Welcome extends Application
     {
         // Get the listing of current bots and their frequency.
         $rows = array();
-        foreach ($this->Players->getCurrentWorths() as $record)
+        foreach ($this->players->getCurrentWorths() as $record)
         {
             $rows[] = (array) $record;
         }
