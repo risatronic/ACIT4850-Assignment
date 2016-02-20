@@ -24,7 +24,7 @@ class Application extends CI_Controller
 	$this->data['pagetitle'] = 'BotCard Trading Centre';
         $this->data['pagesubtitle'] = 'The Cool New Place to Trade Black '
                 . 'Market Bot Parts';
-        $this->data['thisPage'] = '/../../../' . $this->uri->segment(1);
+        $this->data['thisPage'] = $this->uri->segment(1);
         
         // If the sessionUser $_POST parameter is set, then check to see if it 
         // is a real user and log the user in if so. Else, logs the user out.
