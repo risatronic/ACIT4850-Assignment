@@ -17,10 +17,10 @@ Doig, Marisa:
     - Assembly controller (/application/controllers/Assembly.php)
     - assembly view (/application/views/assembly.php)
     - assembly_anon view for logged out users (/application/views/assembly_anon.php)
-    - assembly_heads subview (/application/views/assembly_heads.php)
-    - assembly_bodies subview (/application/views/assembly_bodies.php)
-    - assembly_legs subview (/application/views/assembly_legs.php)
-    - assembly_completed subview (/application/views/assembly_completed.php) (doesn't work)
+    - assembly_heads view fragment (/application/views/assembly_heads.php)
+    - assembly_bodies view fragment (/application/views/assembly_bodies.php)
+    - assembly_legs view fragment (/application/views/assembly_legs.php)
+    - assembly_completed view fragment (/application/views/assembly_completed.php) (doesn't work)
     - completed model (/application/models/completed.php)
     - added a second query to collections model (/application/models/collections.php)
 
@@ -38,19 +38,19 @@ Fernandez de Arteaga, Erick:
     - Base CSS setup (/assets/css/main.css)
     - Welcome controller (/application/controllers/Welcome.php)
     - welcome view (/application/views/welcome.php)
-    - welcome_status subview (/application/views/welcome_status.php)
-    - welcome_players subview (/application/views/welcome_players.php)
+    - welcome_status view fragment (/application/views/welcome_status.php)
+    - welcome_players view fragment (/application/views/welcome_players.php)
     - Portfolio controller (/application/controllers/Portfolio.php)
     - portfolio view (/application/views/portfolio.php)
-    - portfolio_select subview (/application/views/portfolio_select.php)
-    - portfolio_activity subview (/application/views/portfolio_activity.php)
-    - portfolio_holdings subview (/application/views/portfolio_holdings.php)
+    - portfolio_select view fragment (/application/views/portfolio_select.php)
+    - portfolio_activity view fragment (/application/views/portfolio_activity.php)
+    - portfolio_holdings view fragment (/application/views/portfolio_holdings.php)
     - Portfolio CSS setup (/assets/css/portfolio.css)
     - Assemble controller (/application/controllers/Assemble.php)
     - assemble view (/application/views/assemble.php)
-    - assemble_builder subview (/application/views/assemble_builder.php)
-    - assemble_preview subview (/application/views/assemble_preview.php)
-    - assemble_denied subview (/application/views/assemble_denied.php)
+    - assemble_builder view fragment (/application/views/assemble_builder.php)
+    - assemble_preview view fragment (/application/views/assemble_preview.php)
+    - assemble_denied view fragment (/application/views/assemble_denied.php)
     - Players model (/application/models/players.php)
     - Series model (/application/models/series.php)
     - Collections model (/application/models/collections.php)
@@ -66,13 +66,15 @@ Fernandez de Arteaga, Erick:
     
     - Allman-style braces
     - Tabs for indentation
-    - Snake case for variables and methods (except those relating to subviews)
+    - Snake case for variables and methods (except those relating to view 
+        fragments)
     - CodeIgniter conventions for file naming (except those relating to 
-        subviews)
-    - {main view name}_{subview name} naming for subviews 
+        view fragments)
+    - {main view name}_{view fragment name} naming for view fragments 
         (e.g., welcome_status.php)
-    - Pseudo-variables and methods for creating subviews take the same name as 
-        the subview (e.g., {welcome_status}, welcome_status(), etc.)
+    - Pseudo-variables and methods for creating view fragments take the same 
+        name as the view fragment (e.g., {welcome_status}, welcome_status(), 
+        etc.)
 
     ----------------------------------------------------------------------------
         Global Session, State, and Pseudo- Variables to Know
