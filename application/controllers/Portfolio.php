@@ -42,8 +42,6 @@ class Portfolio extends Application
         $portfolioPlayer = $this->input->post('portfolioPlayer');
         if ($portfolioPlayer !== null)
         {
-            // Clear the user selection from the session and return it;
-            $_POST['portfolioPlayer'] = null;
             return $portfolioPlayer;
         }
             
